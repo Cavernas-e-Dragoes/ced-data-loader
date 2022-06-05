@@ -1,13 +1,20 @@
 package ced.dataloader.model;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Data
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 public class Equipment {
+
+    @EqualsAndHashCode.Include
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -56,86 +63,7 @@ public class Equipment {
         this.description = description;
     }
 
-    public String getName() {
-        return name;
+    public Equipment() {
+
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public Integer getAc() {
-        return ac;
-    }
-
-    public void setAc(Integer ac) {
-        this.ac = ac;
-    }
-
-    public Integer getStrength() {
-        return strength;
-    }
-
-    public void setStrength(Integer strength) {
-        this.strength = strength;
-    }
-
-    public Boolean getStealth() {
-        return stealth;
-    }
-
-    public void setStealth(Boolean stealth) {
-        this.stealth = stealth;
-    }
-
-    public Double getWeight() {
-        return Weight;
-    }
-
-    public void setWeight(Double weight) {
-        this.Weight = weight;
-    }
-
-    public String getDamage() {
-        return damage;
-    }
-
-    public void setDamage(String damage) {
-        this.damage = damage;
-    }
-
-    public String getProperties() {
-        return properties;
-    }
-
-    public void setProperties(String properties) {
-        this.properties = properties;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-
-
 }
