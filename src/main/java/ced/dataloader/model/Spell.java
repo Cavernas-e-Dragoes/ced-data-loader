@@ -49,4 +49,22 @@ public class Spell {
 
     @Column(nullable = false)
     private String source;
+
+    public Spell(String name, String description, Integer level, String school, Integer castingTime, Integer range, String components, String duration, boolean verbal, boolean somatic, boolean material, String source) {
+        this.name = name;
+        this.description = description;
+        this.level = level;
+        this.school = school;
+        this.castingTime = castingTime;
+        this.range = range;
+        this.components = components;
+        this.duration = duration;
+        this.verbal = verbal;
+        this.somatic = somatic;
+        this.material = material;
+        this.source = source;
+    }
+    public Spell(){
+
+    }
 }
